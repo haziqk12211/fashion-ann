@@ -2,5 +2,5 @@ venv/
 __pycache__/ 
 .dvc/cache
 *.h5
-/config.local
-/tmp
+dvc/config.local
+dvc/tmp

@@ -1,0 +1,14 @@
+preprocess:
+  val_split: 0.2
+  random_seed: 42
+
+train:
+  units: 128
+  dropout: 0.3      
+  learning_rate: 0.001
+  epochs: 15
+  batch_size: 64 
+  random_seed: 42
+
+evaluate:
+  batch_size: 64

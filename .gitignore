@@ -3,13 +3,19 @@ __pycache__/
 .dvc/cache
 *.h5
 <<<<<<< HEAD
+<<<<<<< HEAD
 data/
 models/
 .dvc/config.local
 .dvc/tmp
 =======
+=======
+>>>>>>> 8c1988969d3c99f5c0fdb9538017637bdec7a84b
 dvc/config.local
 dvc/tmp
 data/
 models/
+<<<<<<< HEAD
 >>>>>>> 77522cf (dvc.lock and dvc.yaml changes)
+=======
+>>>>>>> 8c1988969d3c99f5c0fdb9538017637bdec7a84b

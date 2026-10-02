@@ -11,4 +11,8 @@ train:
   random_seed: 42
 
 evaluate:
+<<<<<<< HEAD
   batch_size: 128
+=======
+  batch_size: 64
+>>>>>>> 8c1988969d3c99f5c0fdb9538017637bdec7a84b

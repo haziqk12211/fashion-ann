@@ -2,7 +2,15 @@ venv/
 __pycache__/ 
 .dvc/cache
 *.h5
+<<<<<<< HEAD
 data/
 models/
 .dvc/config.local
 .dvc/tmp
+=======
+dvc/config.local
+dvc/tmp
+data/
+metrics/
+models/
+>>>>>>> 77522cf (dvc.lock and dvc.yaml changes)

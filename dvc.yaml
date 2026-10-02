@@ -1,15 +1,15 @@
 stages:
   prepare:
-    cmd: python prepare.py
+    cmd: python src/prepare.py
     deps:
-      - prepare.py
+    - src/prepare.py
     outs:
-      - data/raw
+    - data/raw
 
   preprocess:
-    cmd: python preprocess.py
+    cmd: python src/preprocess.py
     deps:
-      - preprocess.py
+      - src/preprocess.py
       - data/raw
       - params.yaml
     params:
@@ -18,28 +18,28 @@ stages:
       - data/processed
 
   train:
-    cmd: python train.py
+    cmd: python src/train.py
     deps:
-      - train.py
-      - data/processed
-      - params.yaml
+    - src/train.py
+    - data/processed
+    - params.yaml
     params:
-      - train
+    - train
     outs:
-      - models/model.h5   
+    - models/model.h5
 
   evaluate:
-    cmd: python evaluate.py
+    cmd: python src/evaluate.py
     deps:
-      - evaluate.py
-      - models/model.pkl
-      - data/processed
-      - params.yaml
+    - src/evaluate.py
+    - models/model.h5
+    - data/processed
+    - params.yaml
     params:
-      - evaluate
+    - evaluate
     metrics:
-      - metrics/metrics.json:
-          cache: false
+    - metrics/metrics.json:
+        cache: false
     plots:
-      - metrics/confusion_matrix.png:
-          cache: false
+    - metrics/confusion_matrix.png:
+        cache: false

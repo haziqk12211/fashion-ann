@@ -61,5 +61,5 @@ metrics = {
     }
 }
 
-with open("metrics.json", "w") as f:
+with open("metrics/metrics.json", "w") as f:
     json.dump(metrics, f, indent=2)

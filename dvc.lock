@@ -1,0 +1,105 @@
+schema: '2.0'
+stages:
+  prepare:
+    cmd: python src/prepare.py
+    deps:
+    - path: src/prepare.py
+      hash: md5
+      md5: 83ff08d181fbe0fdf09633e1c3cce9d0
+      size: 554
+    outs:
+    - path: data/raw
+      hash: md5
+      md5: 5383716b35c38462a519ea40ff4752c3.dir
+      size: 54950512
+      nfiles: 4
+  train:
+    cmd: python src/train.py
+    deps:
+    - path: data/processed
+      hash: md5
+      md5: 66f99c75e5876d9e704fdb801b1ab2e6.dir
+      size: 219590768
+      nfiles: 6
+    - path: params.yaml
+      hash: md5
+      md5: 517f025e354a277bd2d1a3db3ef1937a
+      size: 201
+    - path: src/train.py
+      hash: md5
+      md5: 5d7813a37b64e1e587363a1f8c58888b
+      size: 1488
+    params:
+      params.yaml:
+        train:
+          units: 128
+          dropout: 0.3
+          learning_rate: 0.001
+          epochs: 15
+          batch_size: 64
+          random_seed: 42
+    outs:
+    - path: models/model.h5
+      hash: md5
+      md5: e4b271c2888c62e65db6f8972b7b8eea
+      size: 1245272
+  evaluate:
+    cmd: python src/evaluate.py
+    deps:
+    - path: data/processed
+      hash: md5
+      md5: 66f99c75e5876d9e704fdb801b1ab2e6.dir
+      size: 219590768
+      nfiles: 6
+    - path: models/model.h5
+      hash: md5
+      md5: e4b271c2888c62e65db6f8972b7b8eea
+      size: 1245272
+    - path: params.yaml
+      hash: md5
+      md5: 517f025e354a277bd2d1a3db3ef1937a
+      size: 201
+    - path: src/evaluate.py
+      hash: md5
+      md5: fcb0a2a83f078ab82aaf19e3b85a91a4
+      size: 1868
+    params:
+      params.yaml:
+        evaluate:
+          batch_size: 64
+    outs:
+    - path: metrics/confusion_matrix.png
+      hash: md5
+      md5: 545a1cb55b5084db40deed730351259e
+      size: 242130
+    - path: metrics/metrics.json
+      hash: md5
+      md5: 569d8a807b44321870f7f0168f0f89a9
+      size: 1102
+  preprocess:
+    cmd: python src/preprocess.py
+    deps:
+    - path: data/raw
+      hash: md5
+      md5: 5383716b35c38462a519ea40ff4752c3.dir
+      size: 54950512
+      nfiles: 4
+    - path: params.yaml
+      hash: md5
+      md5: 517f025e354a277bd2d1a3db3ef1937a
+      size: 201
+    - path: src/preprocess.py
+      hash: md5
+      md5: 23daa904749a3df2c8928192f62dfd66
+      size: 1018
+    params:
+      params.yaml:
+        preprocess:
+          val_split: 0.2
+          random_seed: 42
+    outs:
+    - path: data/processed
+      hash: md5
+      md5: 66f99c75e5876d9e704fdb801b1ab2e6.dir
+      size: 219590768
+      nfiles: 6

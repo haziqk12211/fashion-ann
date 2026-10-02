@@ -3,7 +3,7 @@ preprocess:
   random_seed: 42
 
 train:
-  units: 128
+  units: 256
   dropout: 0.3      
   learning_rate: 0.001
   epochs: 15
@@ -11,8 +11,4 @@ train:
   random_seed: 42
 
 evaluate:
-<<<<<<< HEAD
   batch_size: 128
-=======
-  batch_size: 64
->>>>>>> 8c1988969d3c99f5c0fdb9538017637bdec7a84b

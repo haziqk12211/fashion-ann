@@ -1,111 +1,56 @@
 {
-<<<<<<< HEAD
-  "test_loss": 0.3413,
-  "test_accuracy": 0.8786,
-  "per_class": {
-    "T-shirt": {
-      "precision": 0.8645,
-      "recall": 0.81,
-      "f1_score": 0.8363
-    },
-    "Trouser": {
-      "precision": 0.9888,
-      "recall": 0.969,
-      "f1_score": 0.9788
-    },
-    "Pullover": {
-      "precision": 0.7729,
-      "recall": 0.8,
-      "f1_score": 0.7862
-    },
-    "Dress": {
-      "precision": 0.873,
-      "recall": 0.894,
-      "f1_score": 0.8834
-    },
-    "Coat": {
-      "precision": 0.8075,
-      "recall": 0.751,
-      "f1_score": 0.7782
-    },
-    "Sandal": {
-      "precision": 0.9766,
-      "recall": 0.958,
-      "f1_score": 0.9672
-    },
-    "Shirt": {
-      "precision": 0.6566,
-      "recall": 0.717,
-      "f1_score": 0.6855
-    },
-    "Sneaker": {
-      "precision": 0.9274,
-      "recall": 0.971,
-      "f1_score": 0.9487
-    },
-    "Bag": {
-      "precision": 0.9709,
-      "recall": 0.968,
-      "f1_score": 0.9695
-    },
-    "Boot": {
-      "precision": 0.9703,
-      "recall": 0.948,
-      "f1_score": 0.959
-=======
-  "test_loss": 0.339,
+  "test_loss": 0.3369,
   "test_accuracy": 0.8815,
   "per_class": {
     "T-shirt": {
-      "precision": 0.8552,
-      "recall": 0.821,
-      "f1_score": 0.8378
+      "precision": 0.8782,
+      "recall": 0.8,
+      "f1_score": 0.8373
     },
     "Trouser": {
-      "precision": 0.9877,
-      "recall": 0.966,
-      "f1_score": 0.9767
+      "precision": 0.9918,
+      "recall": 0.971,
+      "f1_score": 0.9813
     },
     "Pullover": {
-      "precision": 0.7719,
-      "recall": 0.802,
+      "precision": 0.7824,
+      "recall": 0.791,
       "f1_score": 0.7867
     },
     "Dress": {
-      "precision": 0.8761,
-      "recall": 0.905,
-      "f1_score": 0.8903
+      "precision": 0.8987,
+      "recall": 0.869,
+      "f1_score": 0.8836
     },
     "Coat": {
-      "precision": 0.8018,
-      "recall": 0.793,
-      "f1_score": 0.7974
+      "precision": 0.7778,
+      "recall": 0.812,
+      "f1_score": 0.7945
     },
     "Sandal": {
-      "precision": 0.9767,
+      "precision": 0.9659,
       "recall": 0.964,
-      "f1_score": 0.9703
+      "f1_score": 0.965
     },
     "Shirt": {
-      "precision": 0.6814,
-      "recall": 0.678,
-      "f1_score": 0.6797
+      "precision": 0.6654,
+      "recall": 0.724,
+      "f1_score": 0.6935
     },
     "Sneaker": {
-      "precision": 0.9224,
-      "recall": 0.975,
-      "f1_score": 0.948
+      "precision": 0.9273,
+      "recall": 0.969,
+      "f1_score": 0.9477
     },
     "Bag": {
-      "precision": 0.9682,
-      "recall": 0.973,
-      "f1_score": 0.9706
+      "precision": 0.978,
+      "recall": 0.977,
+      "f1_score": 0.9775
     },
     "Boot": {
-      "precision": 0.9801,
+      "precision": 0.9791,
       "recall": 0.938,
-      "f1_score": 0.9586
->>>>>>> 8c1988969d3c99f5c0fdb9538017637bdec7a84b
+      "f1_score": 0.9581
     }
   }
 }
